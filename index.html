@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Youtube</title>
+  <!-- 파비콘 -->
+  <link rel="shortcut icon" href="./image/favicon.ico" type="image/x-icon">
+  <!-- 리셋 css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+  <!-- 메테리얼 아이콘 -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- 구글 폰트 -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <!-- main.css 연결 -->
+  <link rel="stylesheet" href="./css/main.css">
+  <!-- index.js 연결 -->
+  <script defer src="./js/index.js"></script>
+</head>
+<body>
+  <!-- 헤더 -->
+  <header>
+    <!-- 첫번째 섹션 -->
+    <ul class="first-section">
+      <li>
+        <span id="btn--open" class="material-icons">
+          menu
+          </span>
+      </li>
+      <li>
+        <a href="">
+          <img src="./image/youtube header.png" alt="youtube_logo">
+        </a>
+      </li>
+      <!-- 두번째 섹션 -->
+      <ul class="second-section">
+        <li class="search">
+          <form action="http://www.youtube.com/results" method="GET">
+            <input name="search_query" id="search__box" placeholder="검색">
+            <!-- <img class="keyboard" src="https://www.gstatic.com/inputtools/images/tia.png" alt="keyboard"> -->
+          </form>
+        </li>
+        <li>
+          <button id="search-btn">
+            <span class="material-icons">
+              search
+              </span>
+          </button>
+        </li>
+        <li>
+          <span class="material-icons mic">
+            keyboard_voice
+            </span>
+        </li>
+      </ul>
+    </ul>
+    <!-- 세번째 섹션 -->
+    <ul class="third-section">
+      <li class="dot">
+        <input type="checkbox" id="open_menu">
+        <label for="open_menu" class="burger">
+          <i class="fa fa-bars"></i>
+          <div id="dot1">
+            <span class="material-icons">
+              apps
+              </span>
+          </div>
+          <!-- 네비게이션바 -->
+          <nav class="dot_nav1">
+            <div id="dot_menu1">
+              <ul>
+                <li class="li_1">
+                  <yt-icon class="style-scope ytd-compact-link-renderer"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon"><g class="style-scope yt-icon"><path fill="#FF0000" d="M6,18h12v1H6V18z M22,6.2v9.6c0,0.66-0.54,1.2-1.2,1.2H3.2C2.54,17,2,16.46,2,15.8V6.2C2,5.54,2.54,5,3.2,5 h17.6C21.46,5,22,5.54,22,6.2z" class="style-scope yt-icon"></path><polygon fill="#FFFFFF" points="15,11 10,8.35 10,13.65 " class="style-scope yt-icon"></polygon></g></svg><!--css-build:shady--></yt-icon>
+                  <span>YouTube TV</span>
+                </li>
+                <li class="li_2">
+                  <yt-icon class="style-scope ytd-compact-link-renderer"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon"><g class="style-scope yt-icon"><circle fill="#FF0000" cx="12" cy="12" r="10" class="style-scope yt-icon"></circle><polygon fill="#FFFFFF" points="10,14.65 10,9.35 15,12 " class="style-scope yt-icon"></polygon><path fill="#FFFFFF" d="M12,7c2.76,0,5,2.24,5,5s-2.24,5-5,5s-5-2.24-5-5S9.24,7,12,7 M12,6c-3.31,0-6,2.69-6,6s2.69,6,6,6s6-2.69,6-6 S15.31,6,12,6L12,6z" class="style-scope yt-icon"></path></g></svg><!--css-build:shady--></yt-icon>
+                  <span>YouTube Music</span>
+                </li>
+                <li class="li_3">
+                  <yt-icon class="style-scope ytd-compact-link-renderer"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon"><g class="style-scope yt-icon"><path fill="#FF0000" d="M21.39,13.19c0-0.08,0-0.15,0-0.22c-0.01-0.86-0.5-5-0.78-5.74c-0.32-0.85-0.76-1.5-1.31-1.91 c-0.9-0.67-1.66-0.82-2.6-0.84l-0.02,0c-0.4,0-3.01,0.32-5.2,0.62C9.28,5.4,6.53,5.8,5.88,6.04c-0.9,0.33-1.62,0.77-2.19,1.33 c-1.05,1.04-1.18,2.11-1.04,3.51c0.1,1.09,0.69,5.37,1.02,6.35c0.45,1.32,1.33,2.12,2.47,2.24c0.28,0.03,0.55,0.05,0.82,0.05 c1,0,1.8-0.21,2.72-0.46c1.45-0.39,3.25-0.87,6.97-0.87l0.09,0h0.02c0.91,0,3.14-0.2,4.16-2.07C21.44,15.12,21.41,13.91,21.39,13.19 z" class="style-scope yt-icon"></path><path fill="#000" d="M21.99,13.26c0-0.08,0-0.16-0.01-0.24c-0.01-0.92-0.54-5.32-0.83-6.11c-0.34-0.91-0.81-1.59-1.4-2.03 C18.81,4.17,17.99,4.02,17,4l-0.02,0c-0.43,0-3.21,0.34-5.54,0.66c-2.33,0.32-5.25,0.75-5.95,1C4.53,6.01,3.76,6.48,3.16,7.08 c-1.12,1.1-1.25,2.25-1.11,3.74c0.11,1.16,0.73,5.71,1.08,6.75c0.48,1.41,1.41,2.25,2.63,2.38C6.06,19.98,6.34,20,6.63,20 c1.07,0,1.91-0.23,2.89-0.49c1.54-0.41,3.46-0.93,7.41-0.93l0.1,0h0.02c0.97,0,3.34-0.21,4.42-2.2 C22.04,15.32,22.01,14.03,21.99,13.26z M20.59,15.91c-0.82,1.51-2.75,1.68-3.56,1.68l-0.1,0c-4.09,0-6.07,0.53-7.67,0.96 C8.31,18.8,7.56,19,6.63,19c-0.25,0-0.5-0.01-0.76-0.04c-1.04-0.11-1.54-0.99-1.79-1.71c-0.3-0.88-0.91-5.21-1.04-6.53 C2.9,9.25,3.1,8.54,3.86,7.79c0.5-0.5,1.15-0.89,1.97-1.19c0.17-0.06,1.1-0.32,5.74-0.95C14.2,5.29,16.64,5.01,16.99,5 c0.83,0.02,1.43,0.13,2.17,0.69c0.43,0.32,0.79,0.86,1.06,1.58c0.22,0.58,0.76,4.78,0.77,5.77l0.01,0.25 C21.01,13.96,21.04,15.08,20.59,15.91z" class="style-scope yt-icon"></path><path fill="#000" d="M11.59,14.76c-0.48,0.36-0.8,0.45-1.01,0.45c-0.16,0-0.25-0.05-0.3-0.08c-0.34-0.18-0.42-0.61-0.5-1.2l-0.01-0.1 c-0.04-0.31-0.26-2.1-0.38-3.16L9.3,9.94C9.26,9.66,9.2,9.19,9.54,8.94c0.32-0.23,0.75-0.09,0.96-0.03c0.53,0.17,3.6,1.23,4.59,1.73 c0.21,0.09,0.67,0.28,0.68,0.83c0.01,0.5-0.38,0.74-0.53,0.82L11.59,14.76z" class="style-scope yt-icon"></path><path fill="#FFF" d="M10.3,9.89c0,0,0.5,4.08,0.51,4.19c0.06-0.04,3.79-2.58,3.79-2.58C13.71,11.07,11.07,10.14,10.3,9.89z" class="style-scope yt-icon"></path></g></svg><!--css-build:shady--></yt-icon>
+                  <span>YouTube Kids</span>
+                </li>
+                <li class="li_2">
+                  <yt-icon class="style-scope ytd-compact-link-renderer"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon"><g class="style-scope yt-icon"><defs class="style-scope yt-icon"><radialGradient cx="5.4%" cy="7.11%" r="107.93%" fx="5.4%" fy="7.11%" gradientTransform="matrix(.70653 0 0 1 .016 0)" class="style-scope yt-icon"><stop offset="0%" stop-color="#FFF" class="style-scope yt-icon"></stop><stop offset="100%" stop-color="#FFF" stop-opacity="0" class="style-scope yt-icon"></stop></radialGradient></defs><g fill="none" fill-rule="evenodd" class="style-scope yt-icon"><path d="M1 1h21.77v22H1z" class="style-scope yt-icon"></path><g fill-rule="nonzero" class="style-scope yt-icon"><path fill="#F00" d="M22.54 7.6s-.2-1.5-.86-2.17c-.83-.87-1.75-.88-2.18-.93-3.04-.22-7.6-.2-7.6-.2s-4.56-.02-7.6.2c-.43.05-1.35.06-2.18.93-.65.67-.86 2.18-.86 2.18S1.04 9.4 1 11.18v1.66c.04 1.78.26 3.55.26 3.55s.2 1.5.86 2.18c.83.87 1.9.84 2.4.94 1.7.15 7.2.2 7.38.2 0 0 4.57 0 7.6-.22.43-.05 1.35-.06 2.18-.93.65-.67.86-2.18.86-2.18s.22-1.77.24-3.55v-1.66c-.02-1.78-.24-3.55-.24-3.55z" class="style-scope yt-icon"></path><path fill="#FAFAFA" d="M9.68 8.9v6.18l5.84-3.1" class="style-scope yt-icon"></path><path fill="#000" fill-opacity=".12" d="M9.68 8.88l5.13 3.48.73-.38" class="style-scope yt-icon"></path><path fill="#FFF" fill-opacity=".2" d="M22.54 7.6s-.2-1.5-.86-2.17c-.83-.87-1.75-.88-2.18-.93-3.04-.22-7.6-.2-7.6-.2s-4.56-.02-7.6.2c-.43.05-1.35.06-2.18.93-.65.67-.86 2.18-.86 2.18S1.04 9.4 1 11.18v.1c.04-1.76.26-3.54.26-3.54s.2-1.5.86-2.17c.83-.88 1.75-.88 2.18-.93 3.04-.22 7.6-.2 7.6-.2s4.56-.02 7.6.2c.43.05 1.35.05 2.18.93.65.66.86 2.17.86 2.17s.22 1.78.23 3.55v-.1c0-1.8-.23-3.56-.23-3.56z" class="style-scope yt-icon"></path><path fill="#3E2723" fill-opacity=".2" d="M22.54 16.4s-.2 1.5-.86 2.17c-.83.87-1.75.88-2.18.93-3.04.22-7.6.2-7.6.2s-4.56.02-7.6-.2c-.43-.05-1.35-.06-2.18-.93-.65-.67-.86-2.18-.86-2.18s-.22-1.8-.26-3.57v-.1c.04 1.76.26 3.54.26 3.54s.2 1.5.86 2.17c.83.88 1.75.88 2.18.93 3.04.22 7.6.2 7.6.2s4.56.02 7.6-.2c.43-.05 1.35-.05 2.18-.93.65-.66.86-2.17.86-2.17s.22-1.78.23-3.55v.1c0 1.8-.23 3.56-.23 3.56z" class="style-scope yt-icon"></path><path fill="#FFF" fill-opacity=".2" d="M9.68 15.08v.1l5.84-3.08v-.12" class="style-scope yt-icon"></path><path fill="#3E2723" fill-opacity=".2" d="M9.68 8.9v-.13l5.84 3.1v.1" class="style-scope yt-icon"></path><path fill="url(#a)" fill-opacity=".1" d="M21.54 3.4s-.2-1.5-.86-2.18C19.85.35 18.93.35 18.5.3 15.46.07 10.9.1 10.9.1S6.34.07 3.3.3c-.43.05-1.35.05-2.18.92C.47 1.9.26 3.4.26 3.4S.04 5.17 0 6.95V8.6c.04 1.8.26 3.56.26 3.56s.2 1.52.86 2.18c.83.87 1.9.85 2.4.94 1.7.16 7.2.2 7.38.2 0 0 4.57 0 7.6-.2.43-.06 1.35-.07 2.18-.94.65-.66.86-2.18.86-2.18s.22-1.77.24-3.55V6.97c-.02-1.78-.24-3.55-.24-3.55z" transform="translate(1 4.208)" class="style-scope yt-icon"></path></g></g></g></svg><!--css-build:shady--></yt-icon>
+                  <span>크리에이터 아카데미</span>
+                </li>
+                <li class="li_3">
+                  <yt-icon class="style-scope ytd-compact-link-renderer"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon"><g class="style-scope yt-icon"><defs class="style-scope yt-icon"><radialGradient cx="5.4%" cy="7.11%" r="107.93%" fx="5.4%" fy="7.11%" gradientTransform="matrix(.70653 0 0 1 .016 0)" class="style-scope yt-icon"><stop offset="0%" stop-color="#FFF" class="style-scope yt-icon"></stop><stop offset="100%" stop-color="#FFF" stop-opacity="0" class="style-scope yt-icon"></stop></radialGradient></defs><g fill="none" fill-rule="evenodd" class="style-scope yt-icon"><path d="M1 1h21.77v22H1z" class="style-scope yt-icon"></path><g fill-rule="nonzero" class="style-scope yt-icon"><path fill="#F00" d="M22.54 7.6s-.2-1.5-.86-2.17c-.83-.87-1.75-.88-2.18-.93-3.04-.22-7.6-.2-7.6-.2s-4.56-.02-7.6.2c-.43.05-1.35.06-2.18.93-.65.67-.86 2.18-.86 2.18S1.04 9.4 1 11.18v1.66c.04 1.78.26 3.55.26 3.55s.2 1.5.86 2.18c.83.87 1.9.84 2.4.94 1.7.15 7.2.2 7.38.2 0 0 4.57 0 7.6-.22.43-.05 1.35-.06 2.18-.93.65-.67.86-2.18.86-2.18s.22-1.77.24-3.55v-1.66c-.02-1.78-.24-3.55-.24-3.55z" class="style-scope yt-icon"></path><path fill="#FAFAFA" d="M9.68 8.9v6.18l5.84-3.1" class="style-scope yt-icon"></path><path fill="#000" fill-opacity=".12" d="M9.68 8.88l5.13 3.48.73-.38" class="style-scope yt-icon"></path><path fill="#FFF" fill-opacity=".2" d="M22.54 7.6s-.2-1.5-.86-2.17c-.83-.87-1.75-.88-2.18-.93-3.04-.22-7.6-.2-7.6-.2s-4.56-.02-7.6.2c-.43.05-1.35.06-2.18.93-.65.67-.86 2.18-.86 2.18S1.04 9.4 1 11.18v.1c.04-1.76.26-3.54.26-3.54s.2-1.5.86-2.17c.83-.88 1.75-.88 2.18-.93 3.04-.22 7.6-.2 7.6-.2s4.56-.02 7.6.2c.43.05 1.35.05 2.18.93.65.66.86 2.17.86 2.17s.22 1.78.23 3.55v-.1c0-1.8-.23-3.56-.23-3.56z" class="style-scope yt-icon"></path><path fill="#3E2723" fill-opacity=".2" d="M22.54 16.4s-.2 1.5-.86 2.17c-.83.87-1.75.88-2.18.93-3.04.22-7.6.2-7.6.2s-4.56.02-7.6-.2c-.43-.05-1.35-.06-2.18-.93-.65-.67-.86-2.18-.86-2.18s-.22-1.8-.26-3.57v-.1c.04 1.76.26 3.54.26 3.54s.2 1.5.86 2.17c.83.88 1.75.88 2.18.93 3.04.22 7.6.2 7.6.2s4.56.02 7.6-.2c.43-.05 1.35-.05 2.18-.93.65-.66.86-2.17.86-2.17s.22-1.78.23-3.55v.1c0 1.8-.23 3.56-.23 3.56z" class="style-scope yt-icon"></path><path fill="#FFF" fill-opacity=".2" d="M9.68 15.08v.1l5.84-3.08v-.12" class="style-scope yt-icon"></path><path fill="#3E2723" fill-opacity=".2" d="M9.68 8.9v-.13l5.84 3.1v.1" class="style-scope yt-icon"></path><path fill="url(#a)" fill-opacity=".1" d="M21.54 3.4s-.2-1.5-.86-2.18C19.85.35 18.93.35 18.5.3 15.46.07 10.9.1 10.9.1S6.34.07 3.3.3c-.43.05-1.35.05-2.18.92C.47 1.9.26 3.4.26 3.4S.04 5.17 0 6.95V8.6c.04 1.8.26 3.56.26 3.56s.2 1.52.86 2.18c.83.87 1.9.85 2.4.94 1.7.16 7.2.2 7.38.2 0 0 4.57 0 7.6-.2.43-.06 1.35-.07 2.18-.94.65-.66.86-2.18.86-2.18s.22-1.77.24-3.55V6.97c-.02-1.78-.24-3.55-.24-3.55z" transform="translate(1 4.208)" class="style-scope yt-icon"></path></g></g></g></svg><!--css-build:shady--></yt-icon>
+                  <span>YouTube for Artists</span>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </label>
+        <input type="checkbox" id="open_menu2">
+        <label for="open_menu2" class="burger">
+          <i class="fa fa-bars"></i>
+          <div class="dot2">
+            <span class="material-icons">
+              more_vert
+            </span>
+          </div>
+          네비게이션바
+        <nav>
+          <div id="dot_menu2">
+            <ul>
+              <li class="li_1">
+                <yt-icon id="primary-icon" class="style-scope ytd-toggle-theme-compact-link-renderer"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon"><g class="style-scope yt-icon"><path d="M280.485281,201.514719 L284,198 L287.514719,201.514719 L292.485281,201.514719 L292.485281,206.485281 L296,210 L292.485281,213.514719 L292.485281,218.485281 L287.514719,218.485281 L284,222 L280.485281,218.485281 L275.514719,218.485281 L275.514719,213.514719 L272,210 L275.514719,206.485281 L275.514719,201.514719 L280.485281,201.514719 Z M283.726536,215.86375 C287.116026,215.86375 289.86375,213.251451 289.86375,210.029016 C289.86375,206.806581 287.116026,204.194281 283.726536,204.194281 C283.073662,204.194281 282.164855,204.396254 281.000116,204.800201 C282.532112,206.378393 283.29811,208.121331 283.29811,210.029016 C283.29811,211.9367 282.444938,213.635948 280.738594,215.126758 C282.007413,215.618086 283.003393,215.86375 283.726536,215.86375 Z" transform="translate(-272, -198)" class="style-scope yt-icon"></path></g></svg><!--css-build:shady--></yt-icon>
+                <span>디자인: 기기 테마</span>
+                <yt-icon id="secondary-icon" class="style-scope ytd-toggle-theme-compact-link-renderer"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon arrow"><g mirror-in-rtl="" class="style-scope yt-icon"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" class="style-scope yt-icon"></path></g></svg><!--css-build:shady--></yt-icon>
+              </li>
+              <li>
+                <yt-icon class="style-scope ytd-compact-link-renderer"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon"><g class="style-scope yt-icon"><path d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z" class="style-scope yt-icon"></path></g></svg><!--css-build:shady--></yt-icon>
+                <span>언어: 한국어</span>
+                <yt-icon id="secondary-icon" class="style-scope ytd-toggle-theme-compact-link-renderer"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon arrow"><g mirror-in-rtl="" class="style-scope yt-icon"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" class="style-scope yt-icon"></path></g></svg><!--css-build:shady--></yt-icon>
+              </li>
+              <li>
+                <yt-icon class="style-scope ytd-compact-link-renderer"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon"><g class="style-scope yt-icon"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95c-.32-1.25-.78-2.45-1.38-3.56 1.84.63 3.37 1.91 4.33 3.56zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2s.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56-1.84-.63-3.37-1.9-4.33-3.56zm2.95-8H5.08c.96-1.66 2.49-2.93 4.33-3.56C8.81 5.55 8.35 6.75 8.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2s.07-1.35.16-2h4.68c.09.65.16 1.32.16 2s-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95c-.96 1.65-2.49 2.93-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2s-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z" class="style-scope yt-icon"></path></g></svg><!--css-build:shady--></yt-icon>
+                <span>위치: 한국</span>
+                <yt-icon id="secondary-icon" class="style-scope ytd-toggle-theme-compact-link-renderer"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon arrow"><g mirror-in-rtl="" class="style-scope yt-icon"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" class="style-scope yt-icon"></path></g></svg><!--css-build:shady--></yt-icon>
+              </li>
+              <li>
+                <yt-icon class="style-scope ytd-compact-link-renderer"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon"><g class="style-scope yt-icon"><path d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.1-1.65c.2-.15.25-.42.13-.64l-2-3.46c-.12-.22-.4-.3-.6-.22l-2.5 1c-.52-.4-1.08-.73-1.7-.98l-.37-2.65c-.06-.24-.27-.42-.5-.42h-4c-.27 0-.48.18-.5.42l-.4 2.65c-.6.25-1.17.6-1.7.98l-2.48-1c-.23-.1-.5 0-.6.22l-2 3.46c-.14.22-.08.5.1.64l2.12 1.65c-.04.32-.07.65-.07.98s.02.66.06.98l-2.1 1.65c-.2.15-.25.42-.13.64l2 3.46c.12.22.4.3.6.22l2.5-1c.52.4 1.08.73 1.7.98l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.6-.25 1.17-.6 1.7-.98l2.48 1c.23.1.5 0 .6-.22l2-3.46c.13-.22.08-.5-.1-.64l-2.12-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z" class="style-scope yt-icon"></path></g></svg><!--css-build:shady--></yt-icon>
+                <span>설정</span>
+              </li>
+              <li>
+                <yt-icon class="style-scope ytd-compact-link-renderer"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon"><g class="style-scope yt-icon"><path d="M12 1l9 4v6c0 5.5-3.8 10.7-9 12-5.2-1.3-9-6.5-9-12V5l9-4zM7.7 15.1A5.3 5.3 0 0 1 12 6.7a5.3 5.3 0 0 1 4.3 8.4c-.6-1.1-3-1.7-4.3-1.7-1.3 0-3.7.6-4.3 1.7zM12 8.3a2.2 2.2 0 0 0-2.2 2.2c0 1.2 1 2.2 2.2 2.2a2.2 2.2 0 0 0 2.2-2.2c0-1.2-1-2.2-2.2-2.2zm0-2.6A6.3 6.3 0 0 0 5.7 12a6.3 6.3 0 0 0 6.3 6.3 6.3 6.3 0 0 0 6.3-6.3A6.3 6.3 0 0 0 12 5.7z" class="style-scope yt-icon"></path></g></svg><!--css-build:shady--></yt-icon>
+                <span>YouTube의 내 데이터</span>
+              </li>
+              <li>
+                <yt-icon class="style-scope ytd-compact-link-renderer"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon"><g class="style-scope yt-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z" class="style-scope yt-icon"></path></g></svg><!--css-build:shady--></yt-icon>
+                <span>고객센터</span>
+              </li>
+              <li>
+                <p class="material-icons">
+                  feedback
+                  </p>
+                <span>의견 보내기</span>
+              </li>
+              <li class="li_2">
+                <yt-icon class="style-scope ytd-compact-link-renderer"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon"><g class="style-scope yt-icon"><path d="M20 5H4c-1.1 0-1.99.9-1.99 2L2 17c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm-9 3h2v2h-2V8zm0 3h2v2h-2v-2zM8 8h2v2H8V8zm0 3h2v2H8v-2zm-1 2H5v-2h2v2zm0-3H5V8h2v2zm9 7H8v-2h8v2zm0-4h-2v-2h2v2zm0-3h-2V8h2v2zm3 3h-2v-2h2v2zm0-3h-2V8h2v2z" class="style-scope yt-icon"></path></g></svg><!--css-build:shady--></yt-icon>
+                <span>단축키</span>
+              </li>
+              <li class="li_3">
+                <span>제한 모드: 사용 안함</span>
+                <yt-icon id="secondary-icon" class="style-scope ytd-toggle-theme-compact-link-renderer"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon arrow"><g mirror-in-rtl="" class="style-scope yt-icon"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" class="style-scope yt-icon"></path></g></svg><!--css-build:shady--></yt-icon>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </label>
+      </li>
+      <li class="login_list">
+        <a href="">
+          <button class="login--btn">
+            <span class="material-icons">
+              account_circle
+              </span>
+            <div class="login_text">로그인</div>
+          </button>
+        </a>
+      </li>
+    </ul>
+  </header>
+  <!-- 사이드 메뉴 네비게이션바 -->
+  <nav id="side__menu">
+    <span id="btn--close" class="material-icons">
+      menu
+      </span>
+    <img class="side_logo" src="./image/youtube header.png" alt="youtube_logo">
+    <ul class="side__list">
+      <li class="list_first">
+        <span class="material-icons">
+          home
+          </span>
+        <a href="">홈</a>
+      </li>
+      <li class="list_first">
+        <span class="material-icons">
+          explore
+          </span>
+          <a href="">탐색</a>
+      </li>
+      <li class="list_first list_bottom">
+        <span class="material-icons">
+          subscriptions
+          </span>
+        <a href="">구독</a>
+      </li>
+      <li class="list_first list_top">
+        <yt-icon id="icon" class="guide-icon style-scope ytd-mini-guide-entry-renderer"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon"><g class="style-scope yt-icon"><path fill="none" d="M0 0h24v24H0z" class="style-scope yt-icon"></path><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8 12.5v-9l6 4.5-6 4.5z" class="style-scope yt-icon"></path></g></svg><!--css-build:shady--></yt-icon>
+        <a href="">보관함</a>
+      </li>
+      <li class="list_first list_bottom">
+        <span class="material-icons">
+          history
+          </span>
+        <a href="">시청 기록</a>
+      </li>
+      <div class="list_second">
+        <div class="login_text">
+          로그인하면 동영상에 좋아요를 표시하고 댓글을 달거나 구독할 수 있습니다.
+        </div>
+      </div>
+      <div class="list_third">
+        <a href="">
+          <button class="login--btn">
+            <span class="material-icons">
+              account_circle
+              </span>
+            <div class="login_text">로그인</div>
+          </button>
+        </a>
+      </div>
+      <div class="list_fourth">
+        <span class="first">
+          인기
+        </span> 
+        <span class="bord">YOUTUBE</span>
+      </div>
+      <li class="list_first">
+        <img src="./image/music.jpg" alt="music">
+        <a href="">음악</a>
+      </li>
+      <li class="list_first">
+        <img src="/image/sports.jpg" alt="sports">
+        <a href="">스포츠</a>
+      </li>
+      <li class="list_first">
+        <img src="./image/game.jpg" alt="game">
+        <a href="">게임</a>
+      </li>
+      <li class="list_first">
+        <img src="./image/movie.jpg" alt="movie">
+        <a href="">영화</a>
+      </li>
+      <li class="list_first">
+        <img src="./image/news.jpg" alt="news">
+        <a href="">뉴스</a>
+      </li>
+      <li class="list_first">
+        <img src="./image/realtime.jpg" alt="realtime">
+        <a href="">실시간</a>
+      </li>
+      <li class="list_first">
+        <img src="./image/study.jpg" alt="study">
+        <a href="">학습</a>
+      </li>
+      <li class="list_first list_bottom">
+        <img src="./image/video360.jpg" alt="video360">
+        <a href="">360° 동영상</a>
+      </li>
+      <li class="list_first list_fifth list_bottom">
+        <span class="material-icons">
+          add_circle
+          </span>
+        <a href="">채널 탐색</a>
+      </li>
+      <div class="list_fourth">
+        <span class="bord">
+          YOUTUBE
+        </span> 
+        <span class="second">
+          더보기
+        </span>
+      </div>
+      <li class="list_first">
+        <yt-icon class="guide-icon style-scope ytd-guide-entry-renderer"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path fill-rule="nonzero" d="M21.78 8s-.2-1.37-.8-1.97c-.75-.8-1.6-.8-2-.85C16.2 4.98 12 5 12 5s-4.18-.02-6.97.18c-.4.05-1.24.05-2 .85-.6.6-.8 1.97-.8 1.97s-.2 1.63-.23 3.23v1.7c.03 1.6.23 3.2.23 3.2s.2 1.4.8 2c.76.8 1.75.76 2.2.85 1.57.15 6.6.18 6.77.18 0 0 4.2 0 7-.2.38-.04 1.23-.04 2-.84.6-.6.8-1.98.8-1.98s.2-1.6.2-3.22v-1.7c-.02-1.6-.22-3.22-.22-3.22zm-11.8 7V9.16l5.35 3.03L9.97 15z" class="style-scope yt-icon"></path></g></svg></yt-icon>
+        <a href="">YouTube Premium</a>
+      </li>
+      <li class="list_first">
+        <yt-icon class="guide-icon style-scope ytd-guide-entry-renderer"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M16.94 6.91l-1.41 1.45c.9.94 1.46 2.22 1.46 3.64s-.56 2.71-1.46 3.64l1.41 1.45c1.27-1.31 2.05-3.11 2.05-5.09s-.78-3.79-2.05-5.09zM19.77 4l-1.41 1.45C19.98 7.13 21 9.44 21 12.01c0 2.57-1.01 4.88-2.64 6.54l1.4 1.45c2.01-2.04 3.24-4.87 3.24-7.99 0-3.13-1.23-5.96-3.23-8.01zM7.06 6.91c-1.27 1.3-2.05 3.1-2.05 5.09s.78 3.79 2.05 5.09l1.41-1.45c-.9-.94-1.46-2.22-1.46-3.64s.56-2.71 1.46-3.64L7.06 6.91zM5.64 5.45L4.24 4C2.23 6.04 1 8.87 1 11.99c0 3.13 1.23 5.96 3.23 8.01l1.41-1.45C4.02 16.87 3 14.56 3 11.99s1.01-4.88 2.64-6.54z" class="style-scope yt-icon"></path><circle cx="12" cy="12" r="3" class="style-scope yt-icon"></circle></g></svg><!--css-build:shady--></yt-icon>
+        <a href="">실시간</a>
+      </li>
+      <li class="list_first list_fifth">
+        <span class="material-icons">
+          settings
+          </span>
+        <a href="">설정</a>
+      </li>
+      <li class="list_first list_fifth">
+        <yt-icon class="guide-icon style-scope ytd-guide-entry-renderer"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon"><g class="style-scope yt-icon"><path d="M14.4 6L14 4H5v17h2v-7h5.6l.4 2h7V6z" class="style-scope yt-icon"></path></g></svg><!--css-build:shady--></yt-icon>
+        <a href="">신고 기록</a>
+      </li>
+      <li class="list_first list_fifth">
+        <span class="material-icons">
+          help
+          </span>
+        <a href="">고객센터</a>
+      </li>
+      <li class="list_first list_fifth">
+        <span class="material-icons">
+          sms_failed
+          </span>
+        <a href="">의견 보내기</a>
+      </li>
+      <div>
+        <footer>
+          <div class="footer_first">
+            <a href="https://www.youtube.com/about/">정보</a>
+            <a href="https://blog.youtube/press/">보도자료</a>
+            <a href="https://www.youtube.com/howyoutubeworks/policies/copyright/">저작권</a><br>
+            <a href="https://www.youtube.com/t/contact_us/">문의하기</a>
+            <a href="https://www.youtube.com/creators/">크리에이터</a>
+            <a href="https://www.youtube.com/ads/">광고</a><br>
+            <a href="https://developers.google.com/youtube">개발자</a>
+          </div>
+          <div class="footer_first">
+            <a href="https://www.youtube.com/t/terms">약관</a>
+            <a href="https://policies.google.com/privacy?hl=ko">개인정보처리방침</a><br>
+            <a href="https://www.youtube.com/howyoutubeworks/policies/community-guidelines/">정책 및 안전</a><br>
+            <a href="https://www.youtube.com/howyoutubeworks/?utm_campaign=ytgen&utm_source=ythp&utm_medium=LeftNav&utm_content=txt&u=https%3A%2F%2Fwww.youtube.com%2Fhowyoutubeworks%3Futm_source%3Dythp%26utm_medium%3DLeftNav%26utm_campaign%3Dytgen">YouTube 작동의 원리</a><br>
+            <a href="">새로운 기능 테스트하기</a> 
+          </div>
+          <div class="footer_third">
+            <div>© 2021 Google LLC</div>
+            <div>
+              <p>CEO 선다 피차이</p>
+              <p>주소: 1600 Amphitheatre</p>
+              <p>Parkway, Mountain View, CA</p>
+              <p>94043, USA</p>
+              <p>전화 080-822-1450(무료)</p>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </ul>  
+  </nav>
+  <!-- 본문 -->
+  <section class="wrapper">
+    <!-- 본문 왼쪽 섹션 -->
+    <aside id="left">
+      <ul>
+        <li class="left_first">
+          <span class="material-icons">
+            home
+            </span>
+            <p class="left_text">홈</p>
+        </li>
+        <li class="left_second">
+          <span class="material-icons">
+            explore
+          </span>
+          <p class="left_text">탐색</p>
+        </li>
+        <li class="left_second">
+          <span class="material-icons">
+            subscriptions
+          </span>
+          <p class="left_text">구독</p>
+        </li>
+        <li class="left_second">
+          <yt-icon id="icon" class="guide-icon style-scope ytd-mini-guide-entry-renderer"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon"><g class="style-scope yt-icon"><path fill="none" d="M0 0h24v24H0z" class="style-scope yt-icon"></path><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8 12.5v-9l6 4.5-6 4.5z" class="style-scope yt-icon"></path></g></svg><!--css-build:shady--></yt-icon> 
+          <p class="left_text left_text_new">보관함</p>
+        </li>
+        <li class="left_second">
+          <span class="material-icons">
+            history
+          </span>
+          <p class="left_text">시청기록</p>
+        </li>
+      </ul>  
+    </aside>
+    <!-- 메인 -->
+    <main>
+        <div class="main_items">
+          <ul>
+            <li>
+              <a href="https://www.youtube.com/watch?v=lr4gaI7PbAs">
+                <img src="./image/main_1.webp" alt="main_1" class="main_1">
+                <div class="profile">
+                  <img src="./image/profile_1.jpg" alt="profile_1">
+                </div>
+                <div class="video">
+                  <p class="video_title">IU Coin Lyrics (아이유 Coin 가사) [Color Coded Lyrics/Han/Rom/Eng]</p>
+                  <div class="video_contents">
+                    <p>
+                      <span>Lemoring</span>
+                      <span class="material-icons">
+                        check_circle
+                      </span>
+                    </p>
+                    <p>조회수 47만회 • 3주 전</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>    
+        </div>
+        <div class="main_items">
+          <ul>
+            <a href="https://www.youtube.com/watch?v=x9upuovB5Yk">
+              <li>
+                <img src="./image/main_2.webp" alt="main_2">
+                <div class="profile">
+                  <img src="./image/profile_2.jpg" alt="profile_2">
+                </div>
+                <div class="video">
+                  <p class="video_title">빈첸 - FLYING HIGH WITH U [FLYING HIGH WITH U] | Lyrics/가사</p>
+                  <div class="video_contents">
+                    <p>
+                      <span>알파</span>
+                      <span class="material-icons">
+                        check_circle
+                      </span>
+                    </p>
+                    <p>조회수 69만회 • 1개월 전</p>
+                  </div>
+                </div>
+              </li>
+            </a>
+          </ul>
+        </div>
+      <div class="main_items">
+        <ul>
+          <a href="https://www.youtube.com/watch?v=qDuTeZBmaMg">
+            <li>
+              <img src="./image/main_3.webp" alt="main_3">
+              <div class="profile">
+                <img src="./image/profile_3.jpg" alt="profile_3">
+              </div>
+              <div class="video">
+                <p class="video_title">[ENG] [고등래퍼4/8회] 김우림 - Cold (Feat. 수퍼비) @ 세미파이널 | Mnet210409 방송</p>
+                <div class="video_contents">
+                  <p>
+                    <span>Mnet Official</span>
+                    <span class="material-icons">
+                      check_circle
+                    </span>
+                  </p>
+                  <p>조회수 80만회 • 1주 전</p>
+                </div>
+              </div>
+            </li>
+          </a>
+        </ul>
+      </div>
+      <div class="main_items">
+        <ul>
+          <a href="https://www.youtube.com/watch?v=wDfqXR_5yyQ">
+            <li>
+              <img src="./image/main_4.webp" alt="main_4">
+              <div class="profile">
+                <img src="./image/profile_4.jpg" alt="profile_4">
+              </div>
+              <div class="video">
+                <p class="video_title">[4K][special] 아이유(IU)의 킬링보이스를 라이브로! / 하루 끝, 너의 의미, 스...</p>
+                <div class="video_contents">
+                  <p>
+                    <span>딩고 뮤직 / dingo music</span>
+                    <span class="material-icons">
+                      check_circle
+                    </span>
+                  </p>
+                  <p>조회수 1312만회 • 2주 전</p>
+                </div>
+              </div>
+            </li>
+          </a>
+        </ul>
+      </div>
+      <div class="main_items">
+        <ul>
+          <a href="https://www.youtube.com/watch?v=4QqXl5Otnao">
+            <li>
+              <img src="./image/main_5.webp" alt="main_5">
+              <div class="profile">
+                <img src="./image/profile_2.jpg" alt="profile_5">
+              </div>
+              <div class="video">
+                <p class="video_title">Lil Nekh (릴네크) - Red Light (Feat. BIG Naughty) (Prod. 코드 쿤스트) [고등...</p>
+                <div class="video_contents">
+                  <p>
+                    <span>알파</span>
+                    <span class="material-icons">
+                      check_circle
+                    </span>
+                  </p>
+                  <p>조회수 9.6만회 • 4일 전</p>
+                </div>
+              </div>
+            </li>
+          </a>
+        </ul>
+      </div>
+      <div class="main_items">
+        <ul>
+          <a href="https://www.youtube.com/watch?v=TGMFDfNTgx8">
+            <li>
+              <img src="./image/main_6.webp" alt="main_6">
+              <div class="profile">
+                <img src="./image/profile_6.jpg" alt="profile_6">
+              </div>
+              <div class="video">
+                <p class="video_title">Ep.3 라이브🎵 | 데뷔 후 처음 부르는 UNPRETTY RAPSTAR 명곡 | 여자아이들...</p>
+                <div class="video_contents">
+                  <p>모두의 오디션</p>
+                  <p>조회수 22만회 • 1개월 전</p>
+                </div>
+              </div>
+            </li>
+          </a>
+        </ul>
+      </div>
+      <div class="main_items">
+        <ul>
+          <a href="https://www.youtube.com/watch?v=_SLQ2etHpWA">
+            <li>
+              <img src="./image/main_7.webp" alt="main_7">
+              <div class="profile">
+                <img src="./image/profile_7.jpg" alt="profile_7">
+              </div>
+              <div class="video">
+                <p class="video_title">배그자매)) 배그 한판|(여자)아이들| (자막x)</p>
+                <div class="video_contents">
+                  <p>m미쳤어엉</p>
+                  <p>조회수 1.9천회 • 5개월 전</p>
+                </div>
+              </div>
+            </li>
+          </a>
+        </ul>
+      </div>
+      <div class="main_items">
+        <ul>
+          <a href="https://www.youtube.com/watch?v=rb94IMiokyw">
+            <li>
+              <img src="./image/main_8.webp" alt="main_8">
+              <div class="profile">
+                <img src="./image/profile_8.jpg" alt="profile_8">
+              </div>
+              <div class="video">
+                <p class="video_title">리플레이 : 다시 시작되는 순간 OST 모음 (가사포함) | 웹드라마 OST 플레이리...</p>
+                <div class="video_contents">
+                  <p>밤공원</p>
+                  <p>조회수 287회 • 1개월 전</p>
+                </div>
+              </div>
+            </li>
+          </a>
+        </ul>
+      </div>
+      <div class="main_items">
+        <ul>
+          <a href="https://www.youtube.com/watch?v=Zegt6IhN1d4">
+            <li>
+              <img src="./image/main_9.webp" alt="main_9">
+              <div class="profile">
+                <img src="./image/profile_1.jpg" alt="profile_9">
+              </div>
+              <div class="video">
+                <p class="video_title">IZ*ONE Panorama Lyrics(아이즈원 파노라마 가사) [Color Coded Lyrics/Han/...</p>
+                <div class="video_contents">
+                  <p>
+                    <span>Lemoring</span>
+                    <span class="material-icons">
+                      check_circle
+                    </span>
+                  </p>
+                  <p>조회수 146만회 • 4개월 전</p>
+                </div>
+              </div>
+            </li>
+          </a>
+        </ul>
+      </div>  
+      <div class="main_items">
+        <ul>
+          <a href="https://www.youtube.com/watch?v=n5X1bSn5P18">
+            <li>
+              <img src="./image/main_10.webp" alt="main_10">
+              <div class="profile">
+                <img src="./image/profile_10.jpg" alt="profile_10">
+              </div>
+              <div class="video">
+                <p class="video_title">[Official Video] 우예린-소녀(少女)</p>
+                <div class="video_contents">
+                  <p>woo yerin우예린</p>
+                  <p>조회수 2.7만회 • 1년 전</p>
+                </div>
+              </div>
+            </li>
+          </a>
+        </ul>
+      </div>  
+      <div class="main_items">
+        <ul>
+          <a href="https://www.youtube.com/watch?v=WhbkPX70itU">
+            <li>
+              <img src="./image/main_11.webp" alt="main_11">
+              <div class="profile">
+                <img src="./image/profile_11.jpg" alt="profile_11">
+              </div>
+              <div class="video">
+                <p class="video_title">01. 속삭임의 회랑(Whispering gallery) - 안예은(YEEUN AHN) Official Audio</p>
+                <div class="video_contents">
+                  <p>xxentertainment</p>
+                  <p>조회수 7.5만회 • 1년 전</p>
+                </div>
+              </div>
+            </li>
+          </a>
+        </ul>
+      </div>  
+      <div class="main_items">
+        <ul>
+          <a href="https://www.youtube.com/watch?v=LOSLn5cyWdk&list=WL&index=28&t=1620s">
+            <li>
+              <img src="./image/main_12.webp" alt="main_12">
+              <div class="profile">
+                <img src="./image/profile_12.jpg" alt="profile_12">
+              </div>
+              <div class="video">
+                <p class="video_title">[Playlist] 😊마음이 복잡하고 힘들때 듣기 좋은 (여자)아이들 노래 모음 | 커버곡...</p>
+                <div class="video_contents">
+                  <p>신짜요니더쇼콜리히</p>
+                  <p>조회수 4천회 • 1개월 전</p>
+                </div>
+              </div>
+            </li>
+          </a>
+        </ul>
+      </div>      
+    </main>
+  </section>
+</body>
+</html>
