@@ -1,6 +1,7 @@
 body{
     font-family: 'Roboto', sans-serif;
     width: 100%;
+    height: auto;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.4;
@@ -11,6 +12,7 @@ body{
 .material-icons{
     cursor: pointer;
     color: rgb(90, 90, 90);
+    font-size: 24px;
 }
 
 a{
@@ -25,69 +27,104 @@ a:visited {
 
 /* 헤더 */
 header{
-    background: #ffffff;
     height: 56px;
     padding: 0 16px;
     box-sizing: border-box;
     width: 100%;
-    margin: 0 auto;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     position: fixed;
     top: 0px;
     left: 0px;
     z-index: 1;
+    background-color: #ffffff;
 }
 
 /* 첫번째 섹션 */
-header>ul.first-section{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 25px;
-    margin: auto 0;
+header .first-section{
+    height: 40px;
     display: flex;
     align-items: center;
+    z-index: 3;
 }
 
-header ul.first-section li{
+header .first-section li{
     float: left;
 }
 
 /* 햄버거 아이콘 */
-header ul.first-section li .material-icons{
-    font-size: 25px;
-    margin-right: 20px;
+header .first-section .first-menu{
+    padding: 0 8px;
+    /* margin-right: 16px; */
+}
+
+header .first-section .material-icons{
+    font-size: 24px;
     margin-top: 5px;
 }
 
 /* 유튜브 로고 이미지 */
-header ul.first-section li img{
-    height: 29px;
-    margin-right: 32px;
-    margin-top: 5px;
+header .first-section .youtube_logo{
+    display: flex;
+    margin-top: -5px;
+    padding: 18px 14px 18px 16px;
+    align-items:flex-end;
 }
+
+header .first-section .style-scope{
+    width: 90px;
+    height: 20px;
+    display: flex;
+}
+
+header .first-section span.style-scope{
+    font-size: 10px;
+    width: 12.44px;
+    height:24px;
+    margin-left: 3px;
+    color: rgb(96, 96, 96);
+}
+
 
 /* 두번째 섹션 */
-ul.second-section{
-    padding-left: 166px;
-    margin-top: 5px;
+header .second-section{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    z-index: 4;
+}
+
+header .second-section .search{
+    margin-left: 40px;
+    padding: 0 4px;
+    display: flex;
+    align-items: center;
 }
 
 
-#search__box{
-    height:26px;
-    width: 565px;
+header .second-section .search #search__box{
+    height:20px;
+    width: 523px;
+    margin-left: 6px;
     font-size: 15px;
-    color: rgb(17,17,17);
+    color: rgb(17,17,17);  
+    border: none; 
+}
+
+header .second-section .search div{
+    height:28px;
+    width: 562px;
+    display: flex;
+    align-items: center;
     border: #ccc 1px solid;
-    
 }
 
 
-button#search-btn{
+
+header .second-section .search #search-btn{
+    width: 65px;
     height: 30px;
-    width: 66px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -97,49 +134,50 @@ button#search-btn{
 
 #search-btn .material-icons{
     text-align: center;
-    padding-left: 22px;
     font-size: 20px;
 
 }
 
-.second-section .material-icons{
-    padding-left: 12px;
-    font-size: 18px;
+.second-section .mic{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
+.second-section .mic .material-icons{
+    font-size: 24px;
+}
 
 
 
 /* 세번째 섹션 */
-.third-section{
-    position: absolute;
+header .third-section{
     right: 18px;
     display: flex;
+    padding-left: 34px;
 }
 
 
-.third-section .material-icons{
-    font-size: 25px;
+header .third-section .material-icons{
+    font-size: 24px;
 }
 
-.third-section .dot{
+header .third-section .dot{
     display: flex;
     align-items: center;
 }
 
-.third-section .dot div{
+header .third-section .dot div{
     width: 40px;
     height: 40px;
     display: flex;
+    justify-content: center;
     align-items: center;
     margin-right: 8px;
 }
 
-.third-section .dot .material-icons{
-    padding-right: 20px;
-}
-
-.third-section .login--btn{
+header .third-section .login--btn{
     border: #065fd4 1px solid;
     width: 95px;
     height: 40px;
@@ -150,13 +188,13 @@ button#search-btn{
 }
 
 
-.third-section li button .material-icons{
+header .third-section li button .material-icons{
     color: #065fd4;
     position: absolute;
     width: 24px;
 }
 
-.third-section li div.login_text{
+header .third-section li div.login_text{
     position: absolute;
     font-size: 14px;
     margin-left: 32px;
@@ -164,18 +202,148 @@ button#search-btn{
     display: block;
 }
 
+/* 헤더 점9개 메뉴바 */
+#dot_menu1{
+    width: 227.469px;
+    height: 251px;
+    position: absolute;
+    background: #fafafc;
+    right: 0%;
+    margin-right: 150.031px;
+    top: 40px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+#dot_menu1 ul li{
+    padding: 0px 36px 0px 16px;
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+#dot_menu1 ul li.li_1{
+    margin: 8px 0px 8px 0px;
+}
+
+#dot_menu1 ul li.li_2{
+    margin-top: 16px;
+}
+
+#dot_menu1 ul li.li_3{
+    margin-bottom: 8px;
+}
+
+#dot_menu1 ul li span{
+    font-size: 14px;
+}
+
+#dot_menu1 ul li:hover{
+    background: #e5e5e5;
+    transition: 0.1s;
+}
+
+#dot_menu1 a{
+    display: flex;
+    align-items: center;
+}
+
+#dot_menu1 .style-scope{
+    width: 24px;
+    height: 24px;
+}
+
+#dot_menu1 yt-icon{
+    margin-right: 16px;
+    width: 24px;
+    height: 24px;
+}
+
+
+/* 헤더 점 3개 메뉴바 */
+#dot_menu2{
+    width: 298px;
+    height: 393px;
+    position: absolute;
+    margin-right: 105px;
+    background: #fafafc;
+    right: 0;
+    top: 40px;
+    cursor: pointer;
+}
+
+#dot_menu2 ul li{
+    padding: 0px 16px 0px 16px;
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+#dot_menu2 ul li span{
+    margin-left: 17px;
+    font-size: 14px;
+    width: 202px;
+    height: 21px;
+}
+
+#dot_menu2 ul li:hover{
+    background: #e5e5e5;
+    transition: 0.1s;
+}
+
+#dot_menu2 ul li.li_1{
+    margin-top: 8px;
+}
+
+#dot_menu2 ul li.li_2{
+    margin-bottom: 8px;
+}
+
+#dot_menu2 ul li.li_3{
+    margin-top: 16px;
+    padding-left: 0px;
+}
+
+#dot_menu2 ul li.li_3 span{
+    width:242px
+}
+
+#dot_menu2 .style-scope{
+    width: 24px;
+    height: 24px;
+    margin-left: 0px;
+}
+
+#dot_menu2 .yt-icon{
+    width: 24px;
+    height: 24px;
+    fill: rgb(144,144,144);
+}
+
+#dot_menu2 p{
+    padding-right: 0px;
+    color: rgb(144,144,144);
+}
+
 /* 사이드 메뉴 */
 #side__menu{
-    position: absolute;
-    height: 153%;
-    width: 222px;
+    position: fixed;
+    height: 100vh;
+    width: 236px;
     display: flex;
-    top: -56px;
     background: #ffffff;
-    transform: translateX(-100%);
-    transition: .2s;
     z-index: 4;
+    overflow: scroll;
 }
+
+.hide{
+    visibility: hidden;
+  }
+  
+  .reveal{
+    visibility: visible;
+  }
+
 
 /* 사이드 메뉴 아이콘 */
 #side__menu .material-icons{
@@ -183,41 +351,44 @@ button#search-btn{
     margin: 15px 20px 0 25px;
 }
 
-/* 유튜브 로고 이미지 */
-#side__menu img.side_logo{
-    height: 29px;
-    margin: 12px 32px 0 0;
-}
-
-
 /* 사이드 메뉴 리스트 */
 #side__menu ul.side__list{
     position: absolute;
-    margin-top: 65px;
     font-size: 14px;
-    /* background: indigo; */
 }
 
-#side__menu ul li{
+#side__menu ul.side__list li{
     width: 222px;
     height: 42px;
 }
 
-#side__menu ul li.list_first{
+#side__menu ul.side__list li.list_first{
     display: flex;
     align-items: center;
 }
 
-#side__menu ul li.list_bottom{
+#side__menu ul.side__list .default{
+    margin-top: 11px;
+}
+
+#side__menu ul .click-red{
+    color: #f00;
+}
+
+#side__menu ul .click-gray{
+    background: #e5e5e5;
+}
+
+#side__menu ul.side__list li.list_bottom{
     margin-bottom: 10px;
 }
 
 
-#side__menu ul li.list_top{
+#side__menu ul.side__list li.list_top{
     margin-top: 20px;
 }
 
-#side__menu ul li:hover{
+#side__menu ul.side__list li:hover{
     background: #e5e5e5;
     transition: 0.1s;
 }
@@ -234,17 +405,19 @@ button#search-btn{
     height: 90px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 0 11px;
-    margin-left: 20px;
+    margin-left: 32px;
     color: rgb(3,3,3);
+}
+
+#side__menu ul div.list_second .login_text{
+    width: 170px;
 }
 
 #side__menu ul div.list_third{
     height: 50px;
     display: flex;
     padding-left: 6px;
-    margin-left: 20px;
+    margin-left: 21px;
 }
 
 
@@ -332,6 +505,7 @@ footer .footer_third{
     color: rgb(144,144,144);
     margin: 16px 24px;
     font-size: 13px;
+    margin-bottom: 50px;
 }
 
 /* 본문 섹션 */
@@ -342,8 +516,8 @@ section.wrapper {
 
 /* 왼쪽 섹션 */
 aside#left{
-    width: 5%;
-    height: 90vh;
+    width: 72px;
+    height: 733px;
     float: left;
     display: flex;
     justify-content: center;
@@ -366,10 +540,6 @@ aside#left .left_text{
     cursor: pointer;
 }
 
-aside#left .left_text_new{
-    margin-top: 0px;
-}
-
 aside#left ul li{
     padding: 3px 11px;
 }
@@ -378,8 +548,12 @@ aside#left ul li.left_first{
     margin-top: 18px;
 }
 
+aside#left ul li .click-red{
+    color: #f00;
+}
+
 aside#left ul li.left_second{
-    margin-top: 25px;
+    margin-top: 24px;
 }
 
 aside#left ul li:hover{
@@ -394,23 +568,108 @@ aside#left svg.yt-icon{
     fill: #606060;
 }
 
+.scrollToTop {
+    display: inline-block;
+    animation: float 6s ease infinite;
+    bottom: 30px;
+    position: fixed;
+    left: 16px;
+    opacity: 0;
+    transition: .4s;
+}
+
+aside#left .inner .material-icons{
+    font-size: 40px;
+}
+
+
 /* 메인 */
 main {
     margin-left: 87px;
     width: 100%;
-    height: 100%;
     margin-top: 24px;
 }
 
+/* 사이드바 열릴 때  */
+.sideopen{
+    margin-left: 236px;
+}
+
+
 main .main_items{
-    width: 313.984px;
-    height: 270.609px;
+    width: 313px;
     margin: 0 8px 40px 8px;
     display: flex;
     justify-content: center;
     float: left;
     overflow: hidden;
+    font-size: 14px;
 }
+
+
+main .video_main{
+    position: relative;
+}
+
+
+main .video_time{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    padding: 2px 4px;
+    margin: 4px;
+    background-color: #000000;
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+
+.main_items .hover_img{
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    display: none;
+}
+
+.main_items .hover_img img{
+    width: 20px;
+    height: 20px;
+    padding: 4px;
+    background-color: black;
+    margin-bottom: 4px;
+}
+
+.main_items .hover_text1{
+    position: absolute;
+    top: 4px;
+    right: 32px;
+    display: none;
+    /* visibility: hidden; */
+}
+
+.main_items .hover_text2{
+    position: absolute;
+    top: 36px;
+    right: 32px;
+    display: none;
+    /* visibility: hidden; */
+    /* transition: all 0.3s; */
+}
+
+.act{
+    visibility: visible;
+}
+
+.main_items .video_main span{
+    padding: 4.5px;
+    background: #000000;
+    color: white;
+    margin-right: -3px;
+    display:inline-block;
+}
+
+
 
 main .main_items .profile{
     float: left;
@@ -423,7 +682,7 @@ main .main_items .profile img{
     border-radius: 50%;
 }
 
-main .main_items .video{
+main .main_items .video_info{
     margin-top: 12px;
 }
 
@@ -433,15 +692,12 @@ main .main_items img{
     height: 176.609px;
 }
 
-main .main_items{
-    font-size: 14px;
-}
 
 main .main_items .video_contents{
     color: #606060;
 }
 
-main .main_items .material-icons{
+main .main_items .check{
     font-size: 13px;
 }
 
@@ -454,160 +710,22 @@ main .main_items span{
     margin-right: 3px;
 }
 
-/* 헤더 점9개 메뉴바 */
-#dot_menu1{
-    width: 227.469px;
-    height: 251px;
-    position: absolute;
-    background: #fafafc;
-    right: 0%;
-    margin-right: 150.031px;
-    top: 40px;
-    z-index: 2;
-    cursor: pointer;
-}
 
-#dot_menu1 ul li{
-    padding: 0px 36px 0px 16px;
-    display: flex;
-    align-items: center;
-    height: 40px;
-}
+/* @media screen and (max-width: 1169px) {
+    header .second-section .search #search__box{
+        width: 100%;
+    }
+} */
+/* 
+@media screan and (max-width: 807px){
+    aside#left{
+        display: none;
+    }
+} */
 
-#dot_menu1 ul li.li_1{
-    margin: 8px 0px 8px 0px;
-}
-
-#dot_menu1 ul li.li_2{
-    margin-top: 16px;
-}
-
-#dot_menu1 ul li.li_3{
-    margin-bottom: 8px;
-}
-
-#dot_menu1 ul li span{
-    margin-left: 17px;
-    font-size: 14px;
-}
-
-#dot_menu1 ul li:hover{
-    background: #e5e5e5;
-    transition: 0.1s;
-}
-
-#dot_menu1 .style-scope{
-    width: 24px;
-    height: 24px;
-    margin-left: 0px;
-}
-
-#dot_menu1 .yt-icon{
-    width: 24px;
-    height: 24px;
-}
-
-
-/* 헤더 점 3개 메뉴바 */
-#dot_menu2{
-    width: 298px;
-    height: 393px;
-    position: absolute;
-    margin-right: 105px;
-    background: #fafafc;
-    right: 0;
-    top: 40px;
-    z-index: 2;
-    cursor: pointer;
-    transform:translateY(-150%);
-    /* overflow: hidden; */
-}
-
-#dot_menu2 ul li{
-    padding: 0px 16px 0px 16px;
-    display: flex;
-    align-items: center;
-    height: 40px;
-}
-
-#dot_menu2 ul li span{
-    margin-left: 17px;
-    font-size: 14px;
-    width: 202px;
-    height: 21px;
-}
-
-#dot_menu2 ul li:hover{
-    background: #e5e5e5;
-    transition: 0.1s;
-}
-
-#dot_menu2 ul li.li_1{
-    margin-top: 8px;
-}
-
-#dot_menu2 ul li.li_2{
-    margin-bottom: 8px;
-}
-
-#dot_menu2 ul li.li_3{
-    margin-top: 16px;
-    padding-left: 0px;
-}
-
-#dot_menu2 ul li.li_3 span{
-    width:242px
-}
-
-#dot_menu2 .style-scope{
-    width: 24px;
-    height: 24px;
-    margin-left: 0px;
-}
-
-#dot_menu2 .yt-icon{
-    width: 24px;
-    height: 24px;
-    fill: rgb(144,144,144);
-}
-
-#dot_menu2 p{
-    padding-right: 0px;
-    color: rgb(144,144,144);
-}
-
-/* 네비게이션 클릭 이벤트 dot1 */
-#open_menu + label nav{
-    display: block;
-}
-
-#open_menu + label div#dot_menu1{
-    display: block;
-    transform: translateY(-150%);
-}
-
-#open_menu:checked + label div#dot_menu1{
-    transform: translateY(0%);
-}
-
-#open_menu{
-    display: none;
-}
-
-/* 네비게이션 클릭 이벤트 dot1 */
-#open_menu2 + label nav{
-    display: block;
-}
-
-#open_menu2 + label div#dot_menu2{
-    display: block;
-    transform: translateY(-150%);
-}
-
-#open_menu2:checked + label div#dot_menu2{
-    transform: translateY(0%);
-}
-
-#open_menu2{
-    display: none;
-}
+/* @media screen and (max-width: 1000px) {
+    header .third-section{
+        margin-right: 18px;
+    }
+    
+} */
