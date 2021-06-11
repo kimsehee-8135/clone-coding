@@ -492,17 +492,19 @@ header .third-section li div.login_text{
 /* footer */
 footer a{
     text-decoration: none;
-    color: rgb(96,96,96);
 }
 
 footer .footer_first{
     margin: 16px 24px 0 24px;
     font-size: 13px;
-    
+}
+
+footer .footer_first span{
+    color: #606060;
 }
 
 footer .footer_third{
-    color: rgb(144,144,144);
+    color: #909090;
     margin: 16px 24px;
     font-size: 13px;
     margin-bottom: 50px;
@@ -591,9 +593,10 @@ main {
 }
 
 /* 사이드바 열릴 때  */
-.sideopen{
-    margin-left: 236px;
+.sideopen1{
+    margin-left: 256px;
 }
+
 
 
 main .main_items{
@@ -638,6 +641,7 @@ main .video_time{
     padding: 4px;
     background-color: black;
     margin-bottom: 4px;
+    display: block;
 }
 
 .main_items .hover_text1{
@@ -645,7 +649,6 @@ main .video_time{
     top: 4px;
     right: 32px;
     display: none;
-    /* visibility: hidden; */
 }
 
 .main_items .hover_text2{
@@ -653,8 +656,6 @@ main .video_time{
     top: 36px;
     right: 32px;
     display: none;
-    /* visibility: hidden; */
-    /* transition: all 0.3s; */
 }
 
 .act{
@@ -686,11 +687,12 @@ main .main_items .video_info{
     margin-top: 12px;
 }
 
-main .main_items img{
+.Thumbnail{
     display: block;
-    width: 313.984px;
+    width: 313.984px; 
     height: 176.609px;
 }
+
 
 
 main .main_items .video_contents{
@@ -710,22 +712,11 @@ main .main_items span{
     margin-right: 3px;
 }
 
+main .sideopen2{
+    width: 271.984px;
+}
 
-/* @media screen and (max-width: 1169px) {
-    header .second-section .search #search__box{
-        width: 100%;
-    }
-} */
-/* 
-@media screan and (max-width: 807px){
-    aside#left{
-        display: none;
-    }
-} */
-
-/* @media screen and (max-width: 1000px) {
-    header .third-section{
-        margin-right: 18px;
-    }
-    
-} */
+.sideopen3{
+    width: 271.984px;
+    height: 152.609px;
+}

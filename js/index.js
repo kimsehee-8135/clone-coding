@@ -1,12 +1,31 @@
 // 왼쪽 사이드바 열고 닫기(+메인 레이아웃 변경)
 const menuOpenEl = document.getElementById('btn_sidebar')
 const sideMenuEl = document.getElementById('side__menu')
-const $main = document.getElementById('main')
+const main = document.querySelector('main')
+const main_items = document.querySelectorAll('main .main_items')
+const main_items_img = document.querySelectorAll('.Thumbnail')
 
 menuOpenEl.addEventListener('click', ()=>{
   sideMenuEl.classList.toggle('reveal');
-  $main.classList.toggle('sideopen');
+  main.classList.toggle('sideopen1');
+  for (i = 0; i<main_items.length; i++){
+    main_items[i].classList.toggle('sideopen2')
+    main_items_img[i].classList.toggle('sideopen3')
+  }
 })
+
+// 무한 스크롤
+window.onscroll = function(e) {
+  if((window.innerHeight + window.scrollY) >= document.body.offsetHeight) { 
+    setTimeout(function(){
+      let addContent = document.createElement("div");
+      let y = document.getElementById('wrapper').innerHTML
+      addContent.innerHTML = y;
+      document.querySelector('main').appendChild(addContent);
+    }, 10)
+  }
+}
+
 
 // 헤더 버튼 열고 닫기
 const $dot1 = document.getElementById('dot1')
@@ -20,18 +39,6 @@ $dot1.addEventListener('click', ()=>{
 $dot2.addEventListener('click', ()=>{
   $dot_nav2.classList.toggle('reveal');
 })
-
-// 무한 스크롤
-window.onscroll = function(e) {
-  if((window.innerHeight + window.scrollY) >= document.body.offsetHeight) { 
-    setTimeout(function(){
-      let addContent = document.createElement("div");
-      let y = document.getElementById('wrapper').innerHTML
-      addContent.innerHTML = y;
-      document.querySelector('main').appendChild(addContent);
-    }, 10) 
-  }
-}
 
 // 동영상 마우스 호버시 아이콘 보이게 
 for (let i =0; i<document.querySelectorAll(".main_items").length; i++){
@@ -102,7 +109,7 @@ for (let i =0; i<sidelist.length; i++){
 }
 
 
-// scrollToTop
+// 스크롤 투 탑
 const $scrollToTop = document.querySelector(".scrollToTop");
 
 $scrollToTop.addEventListener("click", function () {
