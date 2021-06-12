@@ -95,6 +95,7 @@ header .second-section{
     z-index: 4;
 }
 
+
 header .second-section .search{
     margin-left: 40px;
     padding: 0 4px;
@@ -112,15 +113,18 @@ header .second-section .search #search__box{
     border: none; 
 }
 
-header .second-section .search div{
+header .second-section .search ul.search_ul{
     height:28px;
     width: 562px;
     display: flex;
     align-items: center;
     border: #ccc 1px solid;
+    
 }
 
-
+header .second-section .search ul{
+    float: left;
+}
 
 header .second-section .search #search-btn{
     width: 65px;
@@ -163,12 +167,12 @@ header .third-section .material-icons{
     font-size: 24px;
 }
 
-header .third-section .dot{
+header .third-section .second-menu{
     display: flex;
     align-items: center;
 }
 
-header .third-section .dot div{
+header .third-section .second-menu div{
     width: 40px;
     height: 40px;
     display: flex;
@@ -203,7 +207,7 @@ header .third-section li div.login_text{
 }
 
 /* 헤더 점9개 메뉴바 */
-#dot_menu1{
+#bento_menu{
     width: 227.469px;
     height: 251px;
     position: absolute;
@@ -215,45 +219,45 @@ header .third-section li div.login_text{
     cursor: pointer;
 }
 
-#dot_menu1 ul li{
+#bento_menu ul li{
     padding: 0px 36px 0px 16px;
     display: flex;
     align-items: center;
     height: 40px;
 }
 
-#dot_menu1 ul li.li_1{
+#bento_menu ul li.li_1{
     margin: 8px 0px 8px 0px;
 }
 
-#dot_menu1 ul li.li_2{
+#bento_menu ul li.li_2{
     margin-top: 16px;
 }
 
-#dot_menu1 ul li.li_3{
+#bento_menu ul li.li_3{
     margin-bottom: 8px;
 }
 
-#dot_menu1 ul li span{
+#bento_menu ul li span{
     font-size: 14px;
 }
 
-#dot_menu1 ul li:hover{
+#bento_menu ul li:hover{
     background: #e5e5e5;
     transition: 0.1s;
 }
 
-#dot_menu1 a{
+#bento_menu a{
     display: flex;
     align-items: center;
 }
 
-#dot_menu1 .style-scope{
+#bento_menu .style-scope{
     width: 24px;
     height: 24px;
 }
 
-#dot_menu1 yt-icon{
+#bento_menu yt-icon{
     margin-right: 16px;
     width: 24px;
     height: 24px;
@@ -261,7 +265,7 @@ header .third-section li div.login_text{
 
 
 /* 헤더 점 3개 메뉴바 */
-#dot_menu2{
+#kebab_menu{
     width: 298px;
     height: 393px;
     position: absolute;
@@ -272,55 +276,55 @@ header .third-section li div.login_text{
     cursor: pointer;
 }
 
-#dot_menu2 ul li{
+#kebab_menu ul li{
     padding: 0px 16px 0px 16px;
     display: flex;
     align-items: center;
     height: 40px;
 }
 
-#dot_menu2 ul li span{
+#kebab_menu ul li span{
     margin-left: 17px;
     font-size: 14px;
     width: 202px;
     height: 21px;
 }
 
-#dot_menu2 ul li:hover{
+#kebab_menu ul li:hover{
     background: #e5e5e5;
     transition: 0.1s;
 }
 
-#dot_menu2 ul li.li_1{
+#kebab_menu ul li.li_1{
     margin-top: 8px;
 }
 
-#dot_menu2 ul li.li_2{
+#kebab_menu ul li.li_2{
     margin-bottom: 8px;
 }
 
-#dot_menu2 ul li.li_3{
+#kebab_menu ul li.li_3{
     margin-top: 16px;
     padding-left: 0px;
 }
 
-#dot_menu2 ul li.li_3 span{
+#kebab_menu ul li.li_3 span{
     width:242px
 }
 
-#dot_menu2 .style-scope{
+#kebab_menu .style-scope{
     width: 24px;
     height: 24px;
     margin-left: 0px;
 }
 
-#dot_menu2 .yt-icon{
+#kebab_menu .yt-icon{
     width: 24px;
     height: 24px;
     fill: rgb(144,144,144);
 }
 
-#dot_menu2 p{
+#kebab_menu p{
     padding-right: 0px;
     color: rgb(144,144,144);
 }

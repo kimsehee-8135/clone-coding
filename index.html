@@ -38,23 +38,23 @@
     </ul>
     <!-- 두번째 섹션 -->
     <ul class="second-section">
-      <ul class="search">
-        <li>
-          <div class="search_div">
-            <form action="http://www.youtube.com/results" method="GET">
-              <input name="search_query" id="search__box" placeholder="검색">
-              <span class="gsok_a gsst_e" id="gs_ok50"><img src="//www.gstatic.com/inputtools/images/tia.png" tia_field_name="search_query" tia_disable_swap="true" tia_property="youtube"></span>
-            </form>
-          </div>
-        </li>
-        <li>
-          <button id="search-btn">
-            <span class="material-icons">
-              search
-              </span>
-          </button>
-        </li>
-      </ul>
+      <div class="search">
+        <form action="http://www.youtube.com/results" method="GET">
+          <ul class="search_ul">
+              <li>
+                <input name="search_query" id="search__box" placeholder="검색">
+                <span class="gsok_a gsst_e" id="gs_ok50"><img src="//www.gstatic.com/inputtools/images/tia.png" tia_field_name="search_query" tia_disable_swap="true" tia_property="youtube"></span>
+              </li>
+          </ul>
+          <ul>
+            <button id="search-btn">
+              <span class="material-icons">
+                search
+                </span>
+            </button>
+          </ul>
+        </form>
+      </div>
       <li class="mic">
         <span class="material-icons">
           keyboard_voice
@@ -63,15 +63,15 @@
     </ul>
     <!-- 세번째 섹션 -->
     <ul class="third-section">
-      <li class="dot">
-          <div id="dot1">
+      <li class="second-menu">
+          <div id="bento">
             <span class="material-icons">
               apps
               </span>
           </div>
           <!-- 네비게이션바 -->
-          <nav class="dot_nav1 hide" >
-            <div id="dot_menu1">
+          <nav class="bento_nav hide" >
+            <div id="bento_menu">
               <ul> 
                 <li class="li_1">
                   <a href="https://tv.youtube.com/welcome/?utm_servlet=prod&utm_source=youtube_web&utm_medium=ep&utm_campaign=home&ve=34273">
@@ -106,14 +106,14 @@
               </ul>
             </div>
           </nav>
-          <div id="dot2">
+          <div id="kebab">
             <span class="material-icons">
               more_vert
             </span>
           </div>
           <!-- 네비게이션바 -->
-        <nav class="dot_nav2 hide">
-          <div id="dot_menu2">
+        <nav class="kebab_nav hide">
+          <div id="kebab_menu">
             <ul>
               <li class="li_1">
                 <yt-icon id="primary-icon" class="style-scope ytd-toggle-theme-compact-link-renderer"><svg focusable="false" class="style-scope yt-icon"><g class="style-scope yt-icon"><path d="M280.485281,201.514719 L284,198 L287.514719,201.514719 L292.485281,201.514719 L292.485281,206.485281 L296,210 L292.485281,213.514719 L292.485281,218.485281 L287.514719,218.485281 L284,222 L280.485281,218.485281 L275.514719,218.485281 L275.514719,213.514719 L272,210 L275.514719,206.485281 L275.514719,201.514719 L280.485281,201.514719 Z M283.726536,215.86375 C287.116026,215.86375 289.86375,213.251451 289.86375,210.029016 C289.86375,206.806581 287.116026,204.194281 283.726536,204.194281 C283.073662,204.194281 282.164855,204.396254 281.000116,204.800201 C282.532112,206.378393 283.29811,208.121331 283.29811,210.029016 C283.29811,211.9367 282.444938,213.635948 280.738594,215.126758 C282.007413,215.618086 283.003393,215.86375 283.726536,215.86375 Z" transform="translate(-272, -198)" class="style-scope yt-icon"></path></g></svg><!--css-build:shady--></yt-icon>
@@ -160,6 +160,7 @@
           </div>
         </nav>
       </li>
+      <!-- 로그인 버튼 -->
       <li class="login_list">
         <a href="https://accounts.google.com/ServiceLogin/signinchooser?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Dko%26next%3Dhttps%253A%252F%252Fwww.youtube.com%252F&hl=ko&ec=65620&flowName=GlifWebSignIn&flowEntry=ServiceLogin">
           <button class="login--btn">
@@ -358,8 +359,8 @@
       </div>
     </ul>  
   </nav>
+
   <!-- 본문 -->
-  
   <section class="wrapper">
     <!-- 본문 왼쪽 섹션 --> 
     <aside id="left">
@@ -396,10 +397,10 @@
         </li> 
       </ul>  
       <div class="inner">
-        <!-- SCROLL TO TOP 버튼 -->
-        <span class="material-icons btn scrollToTop">
-          touch_app
-          </span>
+      <!-- SCROLL TO TOP 버튼 -->
+      <span class="material-icons btn scrollToTop">
+        touch_app
+        </span>
     </div>
     </aside>
     <!-- 메인 -->

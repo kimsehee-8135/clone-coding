@@ -27,11 +27,12 @@ window.onscroll = function(e) {
 }
 
 
-// 헤더 버튼 열고 닫기
-const $dot1 = document.getElementById('dot1')
-const $dot2 = document.getElementById('dot2')
-const $dot_nav1 = document.querySelector('nav.dot_nav1')
-const $dot_nav2 = document.querySelector('nav.dot_nav2')
+
+// 헤더 세번째 섹션 버튼 열고 닫기
+const $dot1 = document.getElementById('bento')
+const $dot2 = document.getElementById('kebab')
+const $dot_nav1 = document.querySelector('nav.bento_nav')
+const $dot_nav2 = document.querySelector('nav.kebab_nav')
 
 $dot1.addEventListener('click', ()=>{
   $dot_nav1.classList.toggle('reveal');
@@ -53,7 +54,7 @@ for (let i =0; i<document.querySelectorAll(".main_items").length; i++){
 })
 }
 
-// 아이콘 마우스 호버시 텍스트 보이게
+// 동영상 아이콘 마우스 호버시 텍스트 보이게
 for (let i =0; i<document.querySelectorAll(".main_items").length; i++){
   let $hover_img1 = document.querySelectorAll(".hover_img1")[i]
   let $hover_img2 = document.querySelectorAll(".hover_img2")[i]
